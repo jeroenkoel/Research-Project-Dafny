@@ -1,0 +1,17 @@
+c:\homeProjects\Dafny\hashMap\obj\Debug\net8.0\hashMap.GeneratedMSBuildEditorConfig.editorconfig
+c:\homeProjects\Dafny\hashMap\obj\Debug\net8.0\hashMap.AssemblyInfoInputs.cache
+c:\homeProjects\Dafny\hashMap\obj\Debug\net8.0\hashMap.AssemblyInfo.cs
+c:\homeProjects\Dafny\hashMap\obj\Debug\net8.0\hashMap.csproj.CoreCompileInputs.cache
+c:\homeProjects\Dafny\hashMap\obj\Debug\net8.0\hashMap.dll
+c:\homeProjects\Dafny\hashMap\obj\Debug\net8.0\refint\hashMap.dll
+c:\homeProjects\Dafny\hashMap\obj\Debug\net8.0\hashMap.pdb
+c:\homeProjects\Dafny\hashMap\hashMap.deps.json
+c:\homeProjects\Dafny\hashMap\hashMap.dll
+c:\homeProjects\Dafny\hashMap\obj\Debug\net8.0\ref\hashMap.dll
+c:\homeProjects\Dafny\hashMap\hashMap.pdb
+C:\homeProjects\Dafny\hashMap\bin\Debug\net8.0\hashMap.deps.json
+C:\homeProjects\Dafny\hashMap\bin\Debug\net8.0\hashMap.dll
+C:\homeProjects\Dafny\hashMap\bin\Debug\net8.0\hashMap.pdb
+C:\homeProjects\Dafny\hashMap\bin\Debug\net8.0\hashMap.exe
+C:\homeProjects\Dafny\hashMap\bin\Debug\net8.0\hashMap.runtimeconfig.json
+C:\homeProjects\Dafny\hashMap\obj\Debug\net8.0\hashMap.genruntimeconfig.cache
