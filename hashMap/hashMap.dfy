@@ -35,11 +35,6 @@ module Hashing {
             forall i, j :: 0 <= i < |chain| && 0 <= j < |chain| && i != j ==> chain[i].key != chain[j].key
         }
 
-        ghost predicate chainUniqueness(chain1: seq<Entry<K, V>>, chain2: seq<Entry<K, V>>)
-        {
-            forall i, j :: 0 <= i < |chain1| && 0 <= j < |chain2| ==> chain1[i].key != chain2[j].key
-        }
-
         ghost predicate keyUniquenessStrong(list: seq<seq<Entry<K, V>>>)
         {
             forall i :: 0 <= i < |list| ==> keyUniquenessChain(list[i])
@@ -117,9 +112,10 @@ module Hashing {
             ensures key !in keysOfTable(table[..]) ==> out.None?
         {
             var index := getIndex(key);
-            if key in keysOfChain(table[index]) {
+            var chain := table[index];
+            if key in keysOfChain(chain) {
                 keysOfTableCorrect(table[..]);
-                out := Some(getEntryChain(table[index], key));
+                out := Some(getEntryChain(chain, key));
             } else {
                 keyNotInHashedChainNotInTable(key);
                 out := None;
@@ -167,12 +163,13 @@ module Hashing {
             modifies table
         {
             var index := getIndex(key);
+            var chain := table[index];
             var ent := new Entry(key, value);
-            if key in keysOfChain(table[index]) {
-                table[index] := replaceKey(ent, table[index]);
+            if key in keysOfChain(chain) {
+                table[index] := replaceKey(ent, chain);
                 keysOfTableCorrect(table[..]);
             } else {
-                table[index] := addKey(ent, table[index]);
+                table[index] := addKey(ent, chain);
                 keysOfTableCorrect(table[..]);
             }
         }
@@ -206,10 +203,11 @@ module Hashing {
             modifies table
         {
             var index := getIndex(key);
-            if key in keysOfChain(table[index]) {
+            var chain := table[index];
+            if key in keysOfChain(chain) {
                 keysOfTableCorrect(table[..]);
-                out := Some(getEntryChain(table[index], key));
-                table[index] := deleteKey(key, table[index]);
+                out := Some(getEntryChain(chain, key));
+                table[index] := deleteKey(key, chain);
                 keyNotInHashedChainNotInTable(key);
             } else {
                 keyNotInHashedChainNotInTable(key);

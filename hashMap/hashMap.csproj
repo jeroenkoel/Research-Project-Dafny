@@ -14,7 +14,6 @@
   <ItemGroup>
       <Compile Include="c:\homeProjects\Dafny\hashMap\hashMap.cs" />
       <Compile Include="test.cs" />
-      <Compile Include="Test1.cs" />
 
       <PackageReference Include="System.Runtime.Numerics" Version="4.3.0" />
       <PackageReference Include="System.Collections.Immutable" Version="1.7.1" />
