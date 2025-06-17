@@ -39,7 +39,7 @@ class Maain
         {
             Console.WriteLine(false);
         }
-        
+
         // test 2: check if a get with a value attached to the key returns that value
         var test2 = map.get(10);
         if (test2.is_Some && test2.dtor_value == "byebye")
@@ -55,6 +55,21 @@ class Maain
         map.delete(10);
         var test3 = map.get(10);
         if (test3.is_None)
+        {
+            Console.WriteLine(true);
+        }
+        else
+        {
+            Console.WriteLine(false);
+        }
+
+        map.put(0, ":)");
+        map.put(512, ":(");
+
+        // test 4: check if both keys exist in the end as they are on the same spot
+        var test4_1 = map.get(0);
+        var test4_2 = map.get(512);
+        if (test4_1.is_Some && test4_2.is_Some && test4_1.dtor_value == ":)" && test4_2.dtor_value == ":(")
         {
             Console.WriteLine(true);
         }
