@@ -1,4 +1,4 @@
-This repository is part of The Research Project CSE3000 of TU Delft 2025
+This repository is part of The [Research Project CSE3000](https://github.com/TU-Delft-CSE/Research-Project) of TU Delft 2025
 
 A lot of files. You can fined the following code in the following maps:
 - The verification code for the in-place selection sort can be found in the map `sorting` under the file `sorting.dfy`. Everything else you see is generated code for which `sorting.cs` is the generated c\# file
